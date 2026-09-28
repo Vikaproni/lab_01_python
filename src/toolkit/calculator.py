@@ -1,6 +1,6 @@
 from decimal import ROUND_HALF_EVEN, Context, Decimal
 
-from toolkit.errors import ZeroCalculatorError
+from toolkit.errors import MissingOperatorError, ZeroCalculatorError
 from toolkit.tokeniz import tokenizator
 from toolkit.validat import validation
 
@@ -47,6 +47,8 @@ def one_step_calculations(operator: str, left_operand: Decimal, right_operand: D
         return context.divide_int(left_operand, right_operand)
     if operator == '%': #остаток от деления
         return context.remainder(left_operand, right_operand)
+
+    raise MissingOperatorError('Неизвестный оператор')
 
 
 priority = {'*':  2, '/': 2, '//': 2, '%': 2, '+': 1, '-': 1} #приоритет операций

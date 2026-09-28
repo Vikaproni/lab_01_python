@@ -49,6 +49,7 @@ def main(expression: list[str]| None = None) -> None:
     arguments = parser.parse_args(no_flag(arm_arguments))
 
     try: #определяет для какой команды какой результат
+        result: Decimal | float
         if arguments.command == 'calc':
             result = finaly_result(arguments.expression)
         else:
