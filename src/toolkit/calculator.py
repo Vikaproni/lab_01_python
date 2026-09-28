@@ -4,7 +4,7 @@ from toolkit.errors import ZeroCalculatorError
 from toolkit.tokeniz import tokenizator
 from toolkit.validat import validation
 
-context = Context(prec = 28, rounding = ROUND_HALF_EVEN) #политика округления: до 28 знаков после точки, округляет к ближайшему, а при равенстве к четной цифре
+context = Context(prec = 28, rounding = ROUND_HALF_EVEN) #политика округления: до 28 значащих цифр после точки, округляет к ближайшему, а при равенстве к четной цифре
 
 
 def unary_digit(tokens:list) -> list:
