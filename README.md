@@ -68,7 +68,7 @@
 │ ├── src/
 │ │ └── toolkit/
 │ │  ├── __init__.py
-│ │  ├── mainin__.py # командная строка
+│ │  ├── __main__.py # командная строка
 │ │  ├── calculator.py # calculate
 │ │  ├── tokeniz.py # tokenizator
 │ │  ├── validat.py # validation
