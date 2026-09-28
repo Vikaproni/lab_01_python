@@ -24,8 +24,6 @@ def converter_lenght(initial_datas: float,initial_units: str, final_units: str) 
         si = initial_datas * 0.001
     elif initial_units == 'cm':
         si = initial_datas * 0.01
-    elif initial_units == 'dm':
-        si = initial_datas * 0.1
     elif initial_units == 'km':
         si = initial_datas * 1000.0
     else:
@@ -35,8 +33,6 @@ def converter_lenght(initial_datas: float,initial_units: str, final_units: str) 
         return si * 1000.0
     elif final_units == 'cm':
         return si * 100.0
-    elif final_units == 'dm':
-        return si * 10.0
     elif final_units == 'km':
         return si * 0.001
     else:
